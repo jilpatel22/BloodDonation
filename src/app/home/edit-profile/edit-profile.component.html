@@ -1,0 +1,294 @@
+<div class="container" >
+  <div class="card " >
+      <div class="card-body">
+        <h3 class="card-title" align="center">USER PROFILE</h3>
+     <div class="row"  >
+      <div class="col-5">
+        <img src="/assets/a2.png" style="border-radius:50%" >
+    </div>
+  
+      <div class="col-7"  >
+          <form role="form" #userForm="ngForm" (submit)="updateUser(userForm)" method="POST" novalidate>
+              <div class="row">
+              <div class="col-sm-4">
+                  <label>FirstNAME: </label>
+              </div>
+              <div class="col-xs-12 col-sm-8 ">
+                  <div class="form-group">
+                      <input #name="ngModel" [class.is-invalid]="name.invalid && name.touched" type="text" id="name"  name="name" class="form-control input-lg" placeholder="First Name" required [ngModel]="userModel.name">
+                      <small class="text-danger" [class.d-none]="name.valid || name.untouched">First Name is required</small>
+                  </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-4">
+                  <label>LastNAME: </label>
+              </div>
+              <div class="col-xs-12 col-sm-8 ">
+                  <div class="form-group">
+                      <input #last_name="ngModel" [class.is-invalid]="last_name.invalid && last_name.touched" type="text" id="last_name"  name="last_name" class="form-control input-lg" placeholder="Last Name" required [ngModel]="userModel.last_name">
+                      <small class="text-danger" [class.d-none]="last_name.valid || last_name.untouched">Last Name is required</small>
+                  </div>
+                </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-4">
+                  <label>EMAIL ID:</label>
+              </div>
+              <div class="col-xs-12 col-sm-8 ">
+                  <div class="form-group">
+                  <input #eid="ngModel" pattern="([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})" [class.is-invalid]="eid.invalid && eid.touched" type="email" id="eid" name="eid" class="form-control input-lg" placeholder="Email Address" required [ngModel]="userModel.eid">
+                  <div *ngIf="eid.errors && (eid.invalid && eid.touched)">
+                    <small class="text-danger" *ngIf="eid.errors.required">Email is required</small>      
+                    <small class="text-danger" *ngIf="eid.errors.pattern">Email is incorrect</small>      
+                  </div>
+                </div>
+              </div>
+              </div>
+          <div class="row">
+                  <div class="col-sm-4">
+                      <label>PHONE NO:</label>
+                  </div>
+                  <div class="col-sm-8">
+                      <div class="form-group">
+                          <input type="tel" #phn="ngModel" pattern="(\+91[\-\s]?)?[0]?(91)?[6789]\d{9}" [class.is-invalid]="phn.invalid && phn.touched" name="phn" id="phn" class="form-control input-lg" placeholder="Mobile no." required [ngModel]="userModel.phn">
+                          <div *ngIf="phn.errors && (phn.invalid && phn.touched)">
+                            <small class="text-danger" *ngIf="phn.errors.required">Mobile no. is required</small>      
+                            <small class="text-danger" *ngIf="phn.errors.pattern">Mobile no. is incorrect</small>      
+                          </div>
+                        </div>
+                  </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-4">
+                  <label>BirthDate:</label>
+              </div>
+              <div class="col-sm-8">
+                  <div class="form-group">
+                      <input type="text" name="date" class="form-control input-lg" placeholder="Choose a BirthDate" required [ngModel]="userModel.date">
+                      <span id="Birth"></span>
+                  </div>
+              </div>
+      </div>
+          <div class="row">
+                  <div class="col-sm-4">
+                      <label>ADDRESS:</label>
+                  </div>
+                  <div class="col-sm-8">
+                      <div ngModelGroup="adress">
+                          <div class="form-group">
+                              <textarea #street="ngModel" [class.is-invalid]="street.invalid && street.touched" class="form-control rounded-0"  rows="3" name="street" placeholder="Enter your Street" required [ngModel]="userModel.adress.street"></textarea>
+                              <small class="text-danger" [class.d-none]="street.valid || street.untouched">street is required</small>
+                            </div>
+                          <div class="form-group">
+                              <input #city="ngModel" [class.is-invalid]="city.invalid && city.touched" type="text" class="form-control rounded-0"  name="city" placeholder="Enter your City" required [ngModel]="userModel.adress.city"/>
+                              <small class="text-danger" [class.d-none]="city.valid || city.untouched">city is required</small>
+                          </div>
+                          <div class="form-group">
+                              <input #state="ngModel" [class.is-invalid]="state.invalid && state.touched" type="text" class="form-control rounded-0"  name="state" placeholder="Enter your State" required [ngModel]="userModel.adress.state"/>
+                              <small class="text-danger" [class.d-none]="state.valid || state.untouched">state is required</small>
+                          </div>
+                          <div class="form-group">
+                              <input #pincode="ngModel" pattern="([0-9]{6}|[0-9]{3}\s[0-9]{3})" [class.is-invalid]="pincode.invalid && pincode.touched" type="text" class="form-control rounded-0"  name="pincode" placeholder="Enter your PinCode" required [ngModel]="userModel.adress.pincode"/>
+                              <div *ngIf="pincode.errors && (pincode.invalid && pincode.touched)">
+                                <small class="text-danger" *ngIf="pincode.errors.required">pincode is required</small>      
+                                <small class="text-danger" *ngIf="pincode.errors.pattern">pincode is incorrect</small>      
+                              </div>
+                          </div>        
+                  </div>
+                  </div>
+          </div>
+          <div class="row">
+                  <div class="col-sm-4">
+                      <label>BLOOD GROUP:</label>
+                  </div>
+                  <div class="col-sm-8">
+                      <div>
+                            <input type="text" #bloodgroup name="bloodgroup" class="form-control input-lg" placeholder="Add a Boodgroup" required [ngModel]="userModel.bloodgroup">
+                      </div>
+                      <!-- <div class="form-group">
+                          <select name="bloodgroup" required class="custom-select">
+                             <option selected>Select your Blood Group</option>
+                             <option *ngFor="let bg of bloodGroups">{{ bg }}</option>
+                           </select>
+                       </div> -->
+                  </div>
+          </div>
+ 
+      <div class="row">
+        <div class="col-xs-12 col-md-6"><input type="submit" [disabled]="userForm.invalid" value="Update" class="btn btn-primary btn-block btn-lg" ></div>
+        <div class="col-xs-12 col-md-6"><a [routerLink]="['/home']" routerLinkActive="router-link-active" class="btn btn-success btn-block btn-lg">Cancel</a></div>
+      </div>
+      <div>
+          <br>
+          WhiteCells:
+          <input #whiteCell="ngModel" type="text" id="whiteCell"  name="whiteCell" class="form-control input-lg" placeholder="Last Name" disabled required [ngModel]="userModel.whitecell">
+      </div>
+      <!-- <div class="row">
+        <div class="col-sm-12">
+            <div class="container">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                        <span class="sr-only">70% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+  </form>
+        </div>
+      </div>
+      </div>   
+  </div> 
+  </div>
+  <div style="margin:5% 10% ">
+    <div class="row" >   
+      <div class="col-sm-6">
+    <div class="flip-card" style="margin-bottom: 40px" >
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="assets/offers/img8.jpg" alt="Avatar" style="width:450px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+              <h5>TERMS AND CONDITION</h5> 
+          <p style="font-size: 12px;margin:27px;text-align: justify;"> Restaurant Hub is brought to you by Restaurant Hub Limited (together with its related companies “we” and “us”). These terms and conditions set out below (“Terms”) apply to your use of the Restaurant Hub website and the services we provide. By using this website (including by making a booking or setting up an account), you confirm that you agree to these Terms, and to any amendments we make from time to time.</p>
+          
+          <button type="button" class="btn btn-default" style="padding-bottom:1px;">Redeem</button>
+      </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-6">
+        <div class="flip-card"  style="margin-bottom: 40px;margin-left: 40px" >
+          <div class="flip-card-inner" >
+            <div class="flip-card-front">
+              <img src="assets/offers/img9.jpg" alt="Avatar" style="width:450px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                  <h5>TERMS AND CONDITION</h5> 
+             <p style="font-size: 13px;margin:27px;text-align: justify;"> 
+                  Vouchers are valid for one year only from date of purchase.<br>
+                   In the case of making a reservation, holders must identify themselves as voucher holders and quote voucher number at time of booking.<br>
+                   All online vouchers will be confirmed by email. The attached document is your voucher. This should be printed and presented to the Hotel on check in.<br>
+                  
+               <button type="button" class="btn btn-default" style="margin-left:85px;margin-top:10px;">Redeem</button>
+                  </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="row" >   
+          <div class="col-sm-6">
+           <div class="flip-card"  style="margin-bottom: 40px" >
+             <div class="flip-card-inner">
+               <div class="flip-card-front">
+                 <img src="assets/offers/img14.png" alt="Avatar" style="width:450px;height:300px">
+               </div>
+               <div class="flip-card-back">
+                      <h5>TERMS AND CONDITION</h5>  
+                      <p style="font-size: 13px;margin:27px;text-align: justify;"> 
+                              Vouchers are valid for one year only from date of purchase.<br>
+                               In the case of making a reservation, holders must identify themselves as voucher holders and quote voucher number at time of booking.<br>
+                               All online vouchers will be confirmed by email. The attached document is your voucher. This should be printed and presented to the Hotel on check in.<br>
+                               <button type="button" class="btn btn-default" style="margin-left:85px;margin-top:10px;">Redeem</button>
+                
+                              </div>
+             </div>
+           </div>
+           </div>
+           <div class="col-sm-6">
+               <div class="flip-card"  style="margin-bottom: 40px;margin-left: 40px">
+                 <div class="flip-card-inner">
+                   <div class="flip-card-front" >
+                     <img src="assets/offers/img7.jpg" alt="Avatar" style="width:450px;height:300px;">
+                   </div>
+                   <div class="flip-card-back">
+                          <h5>TERMS AND CONDITION</h5>  
+                          <p style="font-size: 13px;margin:27px;text-align: justify;"> 
+                                  Vouchers are valid for one year only from date of purchase.<br>
+                                   In the case of making a reservation, holders must identify themselves as voucher holders and quote voucher number at time of booking.<br>
+                                   All online vouchers will be confirmed by email. The attached document is your voucher. This should be printed and presented to the Hotel on check in.<br>
+                                   <button type="button" class="btn btn-default" style="margin-left:85px;margin-top:10px;">Redeem</button>
+                
+                                  </div>
+                 </div>
+               </div>
+           </div>
+           </div>
+           <div class="row" >   
+                  <div class="col-sm-6">
+                   <div class="flip-card"  style="margin-bottom: 40px" >
+                     <div class="flip-card-inner" >
+                       <div class="flip-card-front">
+                         <img src="assets/offers/img11.jpg" alt="Avatar" style="width:450px;height:300px;">
+                       </div>
+                       <div class="flip-card-back">
+                              <h5>TERMS AND CONDITION</h5> 
+                              <p style="font-size: 13px;margin:27px;text-align: justify;"> 
+                                      Vouchers are valid for one year only from date of purchase.<br>
+                                       In the case of making a reservation, holders must identify themselves as voucher holders and quote voucher number at time of booking.<br>
+                                       All online vouchers will be confirmed by email. The attached document is your voucher. This should be printed and presented to the Hotel on check in.<br>
+                                       <button type="button" class="btn btn-default" style="margin-left:85px;margin-top:10px;">Redeem</button>
+                
+                                      </div>
+                     </div>
+                   </div>
+                   </div>
+                   <div class="col-sm-6">
+                       <div class="flip-card"  style="margin-bottom: 40px;margin-left: 40px">
+                         <div class="flip-card-inner">
+                           <div class="flip-card-front">
+                             <img src="assets/offers/img1.jpg" alt="Avatar" style="width:450px;height:300px;">
+                           </div>
+                           <div class="flip-card-back">
+                                  <h5>TERMS AND CONDITION</h5> 
+                                  <p style="font-size: 13px;margin:27px;text-align: justify;"> 
+                                          Vouchers are valid for one year only from date of purchase.<br>
+                                           In the case of making a reservation, holders must identify themselves as voucher holders and quote voucher number at time of booking.<br>
+                                           All online vouchers will be confirmed by email. The attached document is your voucher. This should be printed and presented to the Hotel on check in.<br>
+                                           <button type="button" class="btn btn-default" style="margin-left:85px;margin-top:10px;">Redeem</button>
+                
+                                          </div>
+                         </div>
+                       </div>
+                   </div>
+                  </div> 
+                   <div class="row" >   
+                          <div class="col-sm-6">
+                           <div class="flip-card"  style="margin-bottom: 40px" >
+                             <div class="flip-card-inner">
+                               <div class="flip-card-front">
+                                 <img src="assets/offers/img15.png" alt="Avatar" style="width:450px;height:300px;">
+                               </div>
+                               <div class="flip-card-back">
+                                      <h5>TERMS AND CONDITION</h5> 
+                                      <p style="font-size: 13px;margin:27px;text-align: justify;"> 
+                                              Vouchers are valid for one year only from date of purchase.<br>
+                                               In the case of making a reservation, holders must identify themselves as voucher holders and quote voucher number at time of booking.<br>
+                                               All online vouchers will be confirmed by email. The attached document is your voucher. This should be printed and presented to the Hotel on check in.<br>
+                                               <button type="button" class="btn btn-default" style="margin-left:85px;margin-top:10px;">Redeem</button>
+                
+                                              </div>
+                             </div>
+                           </div>
+                           </div>
+                           <div class="col-sm-6">
+                               <div class="flip-card"  style="margin-bottom: 40px;margin-left: 40px">
+                                 <div class="flip-card-inner">
+                                   <div class="flip-card-front">
+                                     <img src="assets/offers/img5.jpg" alt="Avatar" style="width:450px;height:300px;">
+                                   </div>
+                                   <div class="flip-card-back">
+                                     <h5>TERMS AND CONDITION</h5> 
+                                     <p style="font-size: 13px;margin:27px;text-align:justify;"> 
+                                          Vouchers are valid for one year only from date of purchase.<br>
+                                           In the case of making a reservation, holders must identify themselves as voucher holders and quote voucher number at time of booking.<br>
+                                           All online vouchers will be confirmed by email. The attached document is your voucher. This should be printed and presented to the Hotel on check in.<br>
+                                           <button type="button" class="btn btn-default" style="margin-left:85px;margin-top:10px;">Redeem</button>
+                
+                                          </div>
+                                 </div>
+                               </div>
+                           </div>
+                       </div>
+  </div>

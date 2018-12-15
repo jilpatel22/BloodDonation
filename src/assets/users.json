@@ -1,0 +1,11 @@
+[
+    { "name": "Jay", "last_name": "patel", "eid": "jay@gmail.com", "password1": "user1", "password_confirmation": "user1", "gender": "male", "date": "", "phn": "+919898232398", "adress": { "street": "", "city": "", "state": "", "pincode": "" } },
+    { "name": "Jil", "last_name": "patel", "eid": "jil@gmail.com", "password1": "user2", "password_confirmation": "user2", "gender": "male", "date": "", "phn": "+919898232398", "adress": { "street": "", "city": "", "state": "", "pincode": "" } },
+    { "name": "meet", "last_name": "mehta", "eid": "meet@gmail.com", "password1": "user3", "password_confirmation": "user3", "gender": "male", "date": "", "phn": "+919898232398", "adress": { "street": "", "city": "", "state": "", "pincode": "" } },
+    { "name": "rahi", "last_name": "shah", "eid": "rahi@gmail.com", "password1": "user4", "password_confirmation": "user4", "gender": "male", "date": "", "phn": "+919898232398", "adress": { "street": "", "city": "", "state": "", "pincode": "" } },
+    { "name": "jay", "last_name": "shah", "eid": "jay1@gmail.com", "password1": "user5", "password_confirmation": "user5", "gender": "male", "date": "", "phn": "+919898232398", "adress": { "street": "", "city": "", "state": "", "pincode": "" } },
+    { "name": "meet", "last_name": "shah", "eid": "meet1@gmail.com", "password1": "user6", "password_confirmation": "user6", "gender": "male", "date": "", "phn": "+919898232398", "adress": { "street": "", "city": "", "state": "", "pincode": "" } },
+    { "name": "adi", "last_name": "shanbhog", "eid": "adi@gmail.com", "password1": "user7", "password_confirmation": "user7", "gender": "male", "date": "", "phn": "+919898232398", "adress": { "street": "", "city": "", "state": "", "pincode": "" } },
+    { "name": "nisarg", "last_name": "shah", "eid": "nisarg@gmail.com", "password1": "user8", "password_confirmation": "user8", "gender": "male", "date": "", "phn": "+919898232398", "adress": { "street": "", "city": "", "state": "", "pincode": "" } }
+
+]

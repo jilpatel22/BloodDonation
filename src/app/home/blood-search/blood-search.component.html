@@ -1,0 +1,62 @@
+<div class="row myset">
+    <div  class="col-sm-2">
+      <p style="color:#a01d14;">Blood Group:</p>
+    </div>
+    <div  class="col-sm-3">
+      <div class="form-group">
+        <select #bloodgroup name="bloodgroup" required class="custom-select" style="border-radius:15px;">
+            <option selected >Select your Blood Group</option>
+            <option *ngFor="let bg of bloodGroups" value="{{ bg }}">{{ bg }}</option>
+          </select>
+      </div>
+      <!-- {{ bloodgroup.value }} -->
+    </div>
+    <div class="col-sm-1">
+        <p style="color:#a01d14;">Area:</p>
+    </div>
+    <div  class="col-sm-3">
+        <div class="form-group">
+      <select #area name="area" required class="custom-select" style="border-radius:15px;">
+          <option selected >Select your Area</option>
+          <option *ngFor="let ar of area1" value="{{ ar }}">{{ ar }}</option>
+        </select>
+    </div>
+    <!-- {{ area.value }} -->
+    </div>
+    <div class="col-sm-2">
+        <button type="submit" (click)="searchUser(area.value,bloodgroup.value)"  class="btn btn-primary btn-block btn-lg" >Search</button>
+    </div>
+</div>
+
+<div class="row">
+  <div class="container" style="max-width:960px;">
+    <table class="table table-striped table-hover" style="color:#a01d14;">
+        <thead style="background: #a01d14;color:aliceblue;">
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Phone No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ur of Users">
+            <td>{{ur.name}}</td>
+            <td>{{ur.last_name}}</td>
+            <td>{{ur.eid}}</td>
+            <td>{{ur.phn}}</td>
+          </tr>
+          <!--<tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>-->
+        </tbody>
+      </table>
+  </div>
+</div>

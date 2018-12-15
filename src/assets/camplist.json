@@ -1,0 +1,38 @@
+[
+    {
+        "title" : "BLOOD DONATION CAMP Organized by Amity Institute of Biotechnology" ,
+        "venue" : "Amity Institute of Biotechnology, AB – II Block, AMITY University Uttar Pradesh, Lucknow campus" ,
+        "time": "11:00 AM – 2:00 PM" ,
+        "description": "Blood donation is not hazardous and it proves to be a healthy habit that helps blood renewal. The objective of this camp was not just to collect blood units but also to make students aware about blood donation and its benefits. It was an effort to motivate students to come forward and donate for this noble cause. First time donors need to be encouraged so that once the initial hesitation/fear goes away, the donor will look forward to such camps in near future too." ,
+        "date": "03" ,
+        "month": "March", 
+        "image": "assets/camp/b2.jpg" 
+    },
+    {
+        "title" : "BLOOD DONATION CAMP Organized by Amity Institute of Biotechnology" ,
+        "venue" : "Proximo Techsoft Pvt. Ltd. # 3, 2nd Floor, 100 Feet Ring Road,BTM Layout 2nd Stage,Bangalore – 560076." ,
+        "time": "11:00 AM – 2:00 PM" ,
+        "description": "Blood donation is not hazardous and it proves to be a healthy habit that helps blood renewal. The objective of this camp was not just to collect blood units but also to make students aware about blood donation and its benefits. It was an effort to motivate students to come forward and donate for this noble cause. First time donors need to be encouraged so that once the initial hesitation/fear goes away, the donor will look forward to such camps in near future too." ,
+        "date": "07" ,
+        "month": "March", 
+        "image": "assets/camp/b3.png" 
+    },
+    {
+        "title" : "Blood Donation Camp By EMPI Business School" ,
+        "venue" : "EMPI Business School , south delhi Check Estimated Time  " ,
+        "time": "11:00 AM – 2:00 PM" ,
+        "description": "Blood donation is not hazardous and it proves to be a healthy habit that helps blood renewal. The objective of this camp was not just to collect blood units but also to make students aware about blood donation and its benefits. It was an effort to motivate students to come forward and donate for this noble cause. First time donors need to be encouraged so that once the initial hesitation/fear goes away, the donor will look forward to such camps in near future too." ,
+        "date": "21" ,
+        "month": "March", 
+        "image": "assets/camp/b4.jpg" 
+    },
+    {
+        "title" : "BLOOD DONATION CAMP Organized by Amity Institute of Biotechnology" ,
+        "venue" : "Amity Institute of Biotechnology, AB – II Block, AMITY University Uttar Pradesh, Lucknow campus" ,
+        "time": "11:00 AM – 2:00 PM" ,
+        "description": "Blood donation is not hazardous and it proves to be a healthy habit that helps blood renewal. The objective of this camp was not just to collect blood units but also to make students aware about blood donation and its benefits. It was an effort to motivate students to come forward and donate for this noble cause. First time donors need to be encouraged so that once the initial hesitation/fear goes away, the donor will look forward to such camps in near future too." ,
+        "date": "10" ,
+        "month": "April",
+        "image": "assets/camp/b1.jpg" 
+    }
+]

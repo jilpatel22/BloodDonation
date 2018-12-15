@@ -1,0 +1,48 @@
+<div *ngIf="IsLogin!='true'">
+    You are not logged 
+    <a [routerLink]="['/login']" routerLinkActive="router-link-active">click here</a> for log in.
+</div>
+<div *ngIf="IsLogin=='true'">
+    <div class="sidenav" id="mySidenav">
+    <div id="imgst">
+        <img src="assets/a4.png"  width="70%" />
+    </div>
+    <a [routerLink]="[{ outlets: { sidebar: ['camp'] } }]" routerLinkActive="router-link-active"  id="about">Camp <i class="fa fa-building" ></i></a>
+    <a [routerLink]="[{ outlets: { sidebar: ['search'] } }]" routerLinkActive="router-link-active" id="blog">Search <i class="fa fa-search" ></i></a>
+    <a  id="projects">Projects</a>
+    <a  id="contact">Contact</a>
+</div>
+
+<div class="main">
+  <div class="row myHead">
+    <div class="col-sm-7">
+      <h1 class="header myWhite">Blood Donation</h1>
+    </div>
+    <div class="col-sm-5">
+        <div class="dropdown">
+            <button class="dropbtn">Welcome, {{ unm }}</button>
+            <div class="dropdown-content">
+                <div class="card mycenter">
+                        <p class="text-center">
+                            <a [routerLink]="[{ outlets: { sidebar: ['profile'] } }]" routerLinkActive="router-link-active">
+                                <img class="myimg" src="assets/a2.png" alt="Go to EditUser!" width="100" height="100">
+                            </a>
+                            <!--<i class="fa fa-user fa-3x" aria-hidden="true"></i>-->
+                        </p>
+                        <h3><strong>user</strong></h3>
+                        <p>{{ unm }}</p>
+                        <p class="text-left">
+                            <a [routerLink]="[{ outlets: { sidebar: ['profile'] } }]" routerLinkActive="router-link-active" class="btn btn-primary btn-block btn-sm">Edit Details</a>
+                        </p>
+                </div>
+            </div>            
+          </div>
+          <button [routerLink]="['/welcome']" routerLinkActive="router-link-active" class="dropbtn1" (click)="Logout()">LogOut</button>
+
+    </div>
+  </div>
+
+  <router-outlet name="sidebar"></router-outlet>
+  
+</div>
+</div>

@@ -1,0 +1,35 @@
+ul {
+	width:100%;
+	position:fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b61f1f;
+    font-size:18px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #fff;
+    color : #b61f1f;
+}
+.just{
+text-align:justify
+}
+
+.myShadow:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}

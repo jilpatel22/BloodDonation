@@ -1,0 +1,142 @@
+
+#mySidenav a {
+    position: absolute;
+    left: -320px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 400px;
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+    border-radius: 0 15px 15px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(224, 101, 101);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+
+/* Main content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+#about {
+    top: 150px;
+    background-color: #a01d14;
+}
+
+#blog {
+    top: 270px;
+    background-color: #a01d14;
+}
+
+#projects {
+    top: 390px;
+    background-color: #a01d14;
+}
+
+#contact {
+    top: 510px;
+    background-color: #a01d14;
+}
+#imgst
+{
+    padding-left: 40px;
+    border: 50px;
+    border-color: azure;
+}
+.myHead{
+    background-color: rgb(224, 101, 101);
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;    
+
+}
+.myWhite{
+    color: antiquewhite;
+    font-family: 'bavro-regular-webfont'
+}
+
+.dropbtn {
+    background-color: #e06565;
+    color: white;
+    padding: 10px;
+    font-size: 21px;
+    border: none;
+}
+.dropbtn1 {
+    background-color: #e06565;
+    color: white;
+    padding: 10px;
+    font-size: 21px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #e06565;}
+
+.dropbtn1:hover {background-color: #a20f0f;}
+
+.mycenter{
+    align-items: center;
+}
+.myimg {
+    border-radius: 50%;
+    border: 5px solid #a20f0f;
+}
+@font-face {
+    font-family: "bavro-regular-webfont";
+    src:
+    url("/assets/webfont/bavro-regular-webfont.woff") format("woff"),
+    url("/assets/webfont/Harabara.otf") format("opentype"),
+    url("/assets/webfont/bavro-regular-webfont.svg#filename") format("svg");
+    }
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

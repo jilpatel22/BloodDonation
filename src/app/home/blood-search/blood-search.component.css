@@ -1,0 +1,46 @@
+.mytitle{
+    padding: 20px 20px 0px 20px;
+    font-size: 30px;
+    color: #a01d14;
+    font-family: 'bavro-SIMPLIFICA_Typeface';
+  
+  }
+.myset{
+    padding: 5%;
+}
+.rcorners {
+    border-radius: 25px;
+    border: 7px solid #E0655C;
+}
+.custom-select{
+    font-size:16px;
+}
+.btn-primary{
+    background-color:#a12819;
+    border-color:#a12819;
+}
+.mytable { 
+        background: #f1f8ee; font: .9em/1.2em Georgia, "Times New Roman", Times, serif; color: #033; }
+.mytable caption { font-size: 1.3em; font-weight: bold; text-align: left; padding: 1em 4px; }
+.mytable td,
+.mytable th { padding: 3px 3px .75em 3px; line-height: 1.3em; }
+.mytable th { background: #839E99; color: #fff; font-weight: bold; text-align: left; padding-right: .5em; vertical-align: top; }
+.mytable thead th { background: #a01d14; text-align: center; }
+.mytable .odd td { background: #DBE6DD; }
+.mytable .odd th { background: #6E8D88; }
+.mytable td a,
+.mytable td a:link { color: #325C91; }
+.mytable td a:visited { color: #466C8E; }
+.mytable td a:hover,
+.mytable td a:focus { color: #1E4C94; }
+.mytable th a,
+.mytable td a:active { color: #fff; }
+.mytable tfoot th,
+.mytable tfoot td { background: #2C5755; color: #fff; }
+.mytable th + td { padding-left: .5em; }
+
+@font-face {
+    font-family: 'SIMPLIFICA_Typeface';
+    src:  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('/assets/webfont/SIMPLIFICA Typeface.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
